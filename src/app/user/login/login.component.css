@@ -1,0 +1,16 @@
+.error {
+
+    border: 1px solid red;
+
+}
+
+.form
+{
+    border: 1px solid blue;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 20px;
+    width: fit-content;
+    margin-left: 400px;
+    width: 400px;
+}
