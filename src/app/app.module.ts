@@ -21,6 +21,11 @@ import { MatchDisplayComponent } from './match-display/match-display.component';
 import { ScoringComponent } from './scoring/scoring.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { WinnerDeclarationComponent } from './winner-declaration/winner-declaration.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +40,7 @@ import { WinnerDeclarationComponent } from './winner-declaration/winner-declarat
     MatchDisplayComponent,
     ScoringComponent,
     LeaderboardComponent,
-    WinnerDeclarationComponent
+    WinnerDeclarationComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,14 +48,18 @@ import { WinnerDeclarationComponent } from './winner-declaration/winner-declarat
     AngularFireModule.initializeApp(environment.firebase),
     ReactiveFormsModule,
     FormsModule,
-    AngularFireModule
-    
+    AngularFireModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [AuthGuard,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     AngularFirestore
-    
-  
+
+
   ],
   bootstrap: [AppComponent]
 })

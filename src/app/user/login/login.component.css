@@ -1,16 +1,58 @@
-.error {
-
-    border: 1px solid red;
-
+.card {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form {
+  border-radius: 39px;
+  background: #ffffff;
+  box-shadow: -23px -23px 46px #d9d9d9, 23px 23px 46px #ffffff;
+}
+.card-title {
+  color: #333;
 }
 
-.form
-{
-    border: 1px solid blue;
-    border-radius: 40px;
-    padding: 20px;
-    margin: 20px;
-    width: fit-content;
-    margin-left: 400px;
-    width: 400px;
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.card-body {
+  padding: 0; /* remove default card body padding */
+}
+
+/* Center the Google sign-in button */
+.card.shadow {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.card-body.text-danger {
+  cursor: pointer;
+}
+
+.card-body.text-danger img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+mat-form-field {
+  min-width: 50%;
+  width: 100%;
+}
+
+.google-sign-in-icon {
+  border-radius: 50%; /* Makes the image round */
+  overflow: hidden; /* Ensures the image stays within the circular border */
 }
