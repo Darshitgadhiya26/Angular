@@ -26,6 +26,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatchCreateComponent } from './match-create/match-create.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +46,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ScoringComponent,
     LeaderboardComponent,
     WinnerDeclarationComponent,
+    MatchCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [AuthGuard,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },

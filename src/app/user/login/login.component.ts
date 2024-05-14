@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { AuthService } from 'src/app/shared/auth.service';
+import { ToastClass } from 'src/app/shared/common';
+import { ToastService } from 'src/app/shared/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private auth: AuthService, private _snackBar: MatSnackBar) { }
+  constructor(private auth: AuthService, private toast: ToastService) { }
 
   isSubmitted = false;
 
@@ -49,20 +50,11 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.auth.login(data.email, data.password);
     } else {
-      this.openSnackBar('Enter Valid Data', 'snackbar-error', 3000);
+      this.toast.openSnackBar('Enter Valid Data', ToastClass.success, 100000);
     }
 
   }
 
-  openSnackBar(message: string, panelClass: string, timer: number) {
-
-    const config = new MatSnackBarConfig();
-    config.panelClass = [panelClass];
-    config.duration = timer > 0 ? timer : 3000;
-    config.horizontalPosition = 'center';
-    config.verticalPosition = 'top';
-    this._snackBar.open(message, 'Ok', config);
-  }
   signInWithGoogle() {
     this.auth.googleSignIn();
   }

@@ -6,3 +6,10 @@ export enum ErrorEnum {
 export enum ErrorMsg {
     invalidCredential = "Invalid Email Or Password."
 }
+
+export enum ToastClass {
+    success = "snackbar-success",
+    error = "snackbar-error",
+    warning = "snackbar-warning",
+    info = "snackbar-info"
+}

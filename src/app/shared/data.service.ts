@@ -7,12 +7,12 @@ import firebase from 'firebase/compat/app'; // Import from compat version
   providedIn: 'root'
 })
 export class DataService {
-  
+
   constructor(private firestore: AngularFirestore) { }
 
   createGroup(name: string, owner: string): Promise<void> {
     const id = this.firestore.createId(); // Use AngularFirestore instance
-    const data = { id, name, owner, members: [owner], isJoined : false };
+    const data = { id, name, owner, members: [owner], isJoined: false };
     return this.firestore.collection('groups').doc(id).set(data);
   }
 
@@ -37,8 +37,13 @@ export class DataService {
   }
 
 
-  isLogedIn()
-  {
+  isLogedIn() {
     return localStorage.getItem('token');
+  }
+
+
+  createMatch(data: any): Promise<void> {
+    const id = this.firestore.createId();
+    return this.firestore.collection('Matches').doc(id).set(data);
   }
 }
