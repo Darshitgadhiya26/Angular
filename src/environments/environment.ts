@@ -6,17 +6,12 @@ export const environment = {
   production: false,
   firebase : {
 
-    apiKey: "AIzaSyA4fw8vPVjUlKf0Z_yANb84RbEPze1iawI",
-
-    authDomain: "angular-crud-001.firebaseapp.com",
-  
-    projectId: "angular-crud-001",
-  
-    storageBucket: "angular-crud-001.appspot.com",
-  
-    messagingSenderId: "12747833110",
-  
-    appId: "1:12747833110:web:b57241537a2309385c1a37"
+    apiKey: "AIzaSyDUppxIA89zjpaKg8KPT_3VY1sPt2qxQwE",
+    authDomain: "cricket-app-7e121.firebaseapp.com",
+    projectId: "cricket-app-7e121",
+    storageBucket: "cricket-app-7e121.appspot.com",
+    messagingSenderId: "838375175258",
+    appId: "1:838375175258:web:70c1310e1f644fcbdad463"
   
   
   }
