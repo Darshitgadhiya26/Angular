@@ -1,15 +1,15 @@
 table {
-    width: 100%;
+  width: 100%;
 }
 
 .mat-form-field {
-    font-size: 14px;
-    width: 100%;
+  font-size: 14px;
+  width: 100%;
 }
 
 td,
 th {
-    width: 20%;
+  width: 20%;
 }
 
 /* .main{
@@ -19,7 +19,6 @@ th {
 } */
 
 mat-card {
-    margin-right: 100px;
-    margin-left: 100px;
-
+  margin-right: 100px;
+  margin-left: 100px;
 }

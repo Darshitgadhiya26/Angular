@@ -29,7 +29,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team A",
       Team2Name: "Team B",
       MatchDate: "2024-05-15",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100 // Assuming the currency is USD
     },
     {
@@ -37,7 +41,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team C",
       Team2Name: "Team D",
       MatchDate: "2024-05-16",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100
     },
     {
@@ -45,7 +53,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team E",
       Team2Name: "Team F",
       MatchDate: "2024-05-17",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -53,7 +65,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team G",
       Team2Name: "Team H",
       MatchDate: "2024-05-18",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -61,7 +77,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team I",
       Team2Name: "Team J",
       MatchDate: "2024-05-19",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 110
     },
     {
@@ -69,7 +89,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team A",
       Team2Name: "Team B",
       MatchDate: "2024-05-20",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100 // Assuming the currency is USD
     },
     {
@@ -77,7 +101,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team C",
       Team2Name: "Team D",
       MatchDate: "2024-05-21",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100
     },
     {
@@ -85,7 +113,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team E",
       Team2Name: "Team F",
       MatchDate: "2024-05-22",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -93,7 +125,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team G",
       Team2Name: "Team H",
       MatchDate: "2024-05-23",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -101,7 +137,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team I",
       Team2Name: "Team J",
       MatchDate: "2024-05-24",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 110
     },
     {
@@ -109,7 +149,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team A",
       Team2Name: "Team B",
       MatchDate: "2024-05-25",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100 // Assuming the currency is USD
     },
     {
@@ -117,7 +161,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team C",
       Team2Name: "Team D",
       MatchDate: "2024-05-26",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 100
     },
     {
@@ -125,7 +173,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team E",
       Team2Name: "Team F",
       MatchDate: "2024-05-27",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -133,7 +185,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team G",
       Team2Name: "Team H",
       MatchDate: "2024-05-28",
-      Group: "Group 2",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 120
     },
     {
@@ -141,7 +197,11 @@ export class MatchDisplayComponent implements OnInit {
       Team1Name: "Team I",
       Team2Name: "Team J",
       MatchDate: "2024-05-29",
-      Group: "Group 1",
+      Group: [{
+        groupId: 1, name: 'Group A', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }]
+      }, { groupId: 2, name: 'Group B', listOfMembers: [{ name: 'test1', Id: 'gfgd12345' }, { name: 'test2', Id: 'gfgd1236' }] },
+      { groupId: 3, name: 'Group C', listOfMembers: [{ name: 'test3', Id: 'gfgd12345' }] },
+      ],
       MatchFee: 110
     }
   ];
