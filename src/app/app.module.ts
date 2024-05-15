@@ -31,6 +31,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +52,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     LeaderboardComponent,
     WinnerDeclarationComponent,
     MatchCreateComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatSelectModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [AuthGuard,
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
