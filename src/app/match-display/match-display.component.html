@@ -1,1 +1,61 @@
-<p>match-display works!</p>
+ <button mat-raised-button color="primary" (click)="openMatchFormDialog()">
+  Primary
+</button>
+
+
+
+
+<mat-card>
+  <mat-card-content>
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Team A" #input>
+    </mat-form-field>
+    <div class="mat-elevation-z12">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- MatchNo Column -->
+        <ng-container matColumnDef="MatchNo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> MatchNo </th>
+          <td mat-cell *matCellDef="let row"> {{row.MatchNo}} </td>
+        </ng-container>
+
+        <!-- Team1Name Column -->
+        <ng-container matColumnDef="Team1Name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Team1Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.Team1Name}} </td>
+        </ng-container>
+
+        <!-- Team2Name Column -->
+        <ng-container matColumnDef="Team2Name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Team2Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.Team2Name}} </td>
+        </ng-container>
+
+        <!-- MatchDate Column -->
+        <ng-container matColumnDef="MatchDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> MatchDate </th>
+          <td mat-cell *matCellDef="let row"> {{row.MatchDate}} </td>
+        </ng-container>
+
+        <!-- Group Column -->
+        <ng-container matColumnDef="Group">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Group </th>
+          <td mat-cell *matCellDef="let row"> {{row.Group}} </td>
+        </ng-container>
+
+        <!-- MatchFee Column -->
+        <ng-container matColumnDef="MatchFee">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> MatchFee </th>
+          <td mat-cell *matCellDef="let row"> {{row.MatchFee}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users" #paginator></mat-paginator>
+    </div>
+  </mat-card-content>

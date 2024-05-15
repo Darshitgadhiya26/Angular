@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
+import { ToastClass } from 'src/app/shared/common';
+import { ToastService } from 'src/app/shared/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private auth :AuthService){}
+  constructor(private auth: AuthService, private toast: ToastService) { }
 
   isSubmitted = false;
 
@@ -20,7 +22,7 @@ export class LoginComponent implements OnInit {
 
 
   loginForm: any = new FormGroup({
-    
+
     email: new FormControl('', [
       Validators.required,
       Validators.maxLength(32),
@@ -38,16 +40,19 @@ export class LoginComponent implements OnInit {
   getControl(name: any): AbstractControl | null {
     return this.loginForm.get(name);
   }
+  get l(): { [key: string]: AbstractControl } {
+    return this.loginForm.controls;
+  }
 
-
-  submitFn()
-  {
+  submitFn() {
     this.isSubmitted = true
-     let data = this.loginForm.value;
-    if(this.loginForm.valid)
-    {
-      this.auth.login(data.email,data.password);
+    let data = this.loginForm.value;
+    if (this.loginForm.valid) {
+      this.auth.login(data.email, data.password);
+    } else {
+      this.toast.openSnackBar('Enter Valid Data', ToastClass.success, 100000);
     }
+
   }
 
   signInWithGoogle() {

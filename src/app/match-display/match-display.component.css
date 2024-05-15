@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 20%;
+}
+
+/* .main{
+    margin: 100px;
+    overflow-x: hidden;
+    overflow-y:hidden;
+} */
+
+mat-card {
+    margin-right: 100px;
+    margin-left: 100px;
+
+}

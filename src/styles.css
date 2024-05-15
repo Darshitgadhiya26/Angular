@@ -1,18 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { 
-    height: 100%;
-    background-color: black;
-    opacity: 10;
-    border-color: chartreuse;
-    text-shadow: 5cm;
-    color: white;
-    text-size-adjust: 5px;
-}
-input{
-    background-color: pink;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Success */
+.snackbar-success {
+  background-color: #28a745;
+  color: white;
+}
 
+/* Warning */
+.snackbar-warning {
+  background-color: #f7c327;
+  color: white;
+}
+
+/* Error */
+.snackbar-error {
+  background-color: #f34f60;
+  color: white;
+}
+
+/* Info */
+.snackbar-info {
+  background-color: #33cbe2;
+  color: white;
+}
+
+.mat-simple-snackbar-action {
+  color: white;
+}
+
+::ng-deep #mat-select-0-panel {
+  min-width: unset !important;
+}

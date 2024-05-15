@@ -1,62 +1,170 @@
-
-
-<div class="form bord">
-
-    <h1 class="header">Login Form</h1>
-  <hr>
-    <form [formGroup]="loginForm" (ngSubmit)=" submitFn()">
- 
-      <div class="mb-3">
-  
-        <label for="email" class="form-label" >Email</label>
-  
-        <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" [ngClass]="{error : getControl('email')?.errors && getControl('email')?.touched}">
-  
-        <div class="alert alert-danger" *ngIf=" (isSubmitted ||getControl('email')?.touched) && getControl('email')?.errors">
-          <small class="text-danger" *ngIf="getControl('email')?.errors?.['required']">Email field is requird</small>
-          <small class="text-danger" *ngIf="getControl('email')?.errors?.['maxlength']">Email should be maximum 32 characters long.</small>
-          <small class="text-danger" *ngIf="getControl('email')?.errors?.['email']">Please enter a valid email.</small>
-        </div>
+<!-- <div class="form bord">
+  <h1 class="header">Login Form</h1>
+  <hr />
+  <form [formGroup]="loginForm" (ngSubmit)="submitFn()">
+    <div class="mb-3">
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput placeholder="Email" />
+          <mat-error *ngIf="l['email'].errors?.['required']"
+            >Email is required</mat-error
+          >
+        </mat-form-field>
       </div>
-     
-      <div class="mb-3">
-  
-        <label for="password" class="form-label">Password</label>
-  
-        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" [ngClass]="{error : getControl('password')?.errors && getControl('password')?.touched}">
-  
-        <div class="alert alert-danger" *ngIf=" ( isSubmitted || getControl('password')?.touched )&& getControl('password')?.errors">
-          <small class="text-danger" *ngIf="getControl('password')?.errors?.['required']">Password field is requird</small>
-          <small class="text-danger" *ngIf="getControl('password')?.errors?.['minlength'] || getControl('password')?.errors?.['maxlength']">Password should be minimum 5 and maximum 32 characters long.</small>
-        </div>
-  
-      </div>
-  
-      <div class="mb-3">
-        <button type="submit" value="submit" class="btn btn-success center" id="btn" >Submit</button>
-      </div>
-  
 
 
-      <p>Not Registered 
-    <a routerLink="/register" routerLinkActive="active" >Register</a></p>
-    <p> 
-      <a routerLink="/forgotPassword" routerLinkActive="active" ariaCurrentWhenActive="page">Forgot Password</a></p>
-  
-
-
-      <div class="row mt-2">
-        <a (click)="signInWithGoogle()" style="text-decoration: none;cursor: pointer;">
-            <div class="card shadow text-center">
-                <div class="card-body text-danger">
-                    <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="login with Google" height="24px" width="24px" class="text-dark"> Sign In with Google
-                </div>
-            </div>
-        </a>
     </div>
-    </form>
-  
+
+    <div class="mb-3">
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput placeholder="Password" />
+          <mat-error *ngIf="l['password'].errors?.['required']"
+            >Password is required</mat-error
+          >
+          <mat-error *ngIf="l['password'].errors?.['maxlength']"
+            >Password should be minimum 5 and maximum 32 characters
+            long.</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="mb-3">
+      <button
+        type="submit"
+        value="submit"
+        class="btn btn-success center"
+        id="btn"
+      >
+        Submit
+      </button>
+    </div>
+
+    <p>
+      Not Registered
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+    </p>
+    <p>
+      <a
+        routerLink="/forgotPassword"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Forgot Password</a
+      >
+    </p>
+
+    <div class="row mt-2">
+      <a
+        (click)="signInWithGoogle()"
+        style="text-decoration: none; cursor: pointer"
+      >
+        <div class="card shadow text-center">
+          <div class="card-body text-danger">
+            <img
+              src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"
+              alt="login with Google"
+              height="24px"
+              width="24px"
+              class="text-dark"
+            />
+            Sign In with Google
+          </div>
+        </div>
+      </a>
+    </div>
+  </form>
+</div> -->
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card form border-0">
+    <div class="card-body">
+      <h1 class="card-title text-center">Login Form</h1>
+      <hr />
+      <form [formGroup]="loginForm" (ngSubmit)="submitFn()">
+        <div class="mb-3">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Email" />
+            <mat-error *ngIf="loginForm.get('email').errors?.required">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3">
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input
+              formControlName="password"
+              matInput
+              type="password"
+              placeholder="Password"
+            />
+            <mat-error *ngIf="loginForm.get('password').errors?.required">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3">
+          <button mat-raised-button class="btn d-block mx-auto" color="primary">
+            Login
+          </button>
+        </div>
+
+        <p class="text-center">
+          Not Registered
+          <a routerLink="/register" routerLinkActive="active">Register</a>
+        </p>
+        <p class="text-center">
+          <a
+            routerLink="/forgotPassword"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Forgot Password</a
+          >
+        </p>
+
+        <!-- <div class="text-center">
+          <a
+            (click)="signInWithGoogle()"
+            style="text-decoration: none; cursor: pointer"
+          >
+            <div class="card shadow text-center">
+              <div class="card-body text-danger">
+                <img
+                  src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"
+                  alt="login with Google"
+                  height="24px"
+                  width="24px"
+                  class="text-dark"
+                />
+                Sign In with Google
+              </div>
+            </div>
+          </a>
+        </div> -->
+        <div class="text-center">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="signInWithGoogle()"
+          >
+            <img
+              src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1"
+              alt="login with Google"
+              height="24px"
+              width="24px"
+              class="google-sign-in-icon"
+            />
+            Sign In with Google
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-  
-  
-  
+</div>

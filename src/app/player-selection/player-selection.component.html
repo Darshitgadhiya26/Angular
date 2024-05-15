@@ -1,8 +1,9 @@
 <div class="container mt-5">
-    <h2 class="mb-4">Player Selection</h2>
-    <div class="d-flex mb-3">
-      <button class="btn btn-primary me-3" (click)="generateRandomNumber()">Generate Random Number</button>
-      <p *ngIf="randomNumbers.length > 0">Your assigned random number: {{ randomNumbers[0] }}</p>
-    </div>
+  <h2 class="mb-4">Player Selection</h2>
+  <div class="d-flex mb-3">
+    <!-- <button class="btn btn-primary me-3" (click)="generateRandomNumber()">Generate Random Number</button> -->
+    <p *ngIf="randomNumbers.length > 0">
+      Your assigned random number: {{ randomNumbers[0] }}
+    </p>
   </div>
-  
+</div>

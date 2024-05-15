@@ -1,0 +1,43 @@
+<form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput formControlName="matchNo" placeholder="Match No" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="team1Name" placeholder="Team 1 Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="team2Name" placeholder="Team 2 Name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      formControlName="matchDate"
+      placeholder="Match Date"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select
+      formControlName="group"
+      placeholder="Group"
+      multiple
+      (selectionChange)="onGroupSelectionChange($event)"
+    >
+      <mat-option *ngFor="let group of groups" [value]="group">{{
+        group.name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="matchFee" placeholder="Match Fee" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
