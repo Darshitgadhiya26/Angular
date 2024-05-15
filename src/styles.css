@@ -22,19 +22,19 @@ body {
 
 /* Warning */
 .snackbar-warning {
-  background-color: #ffc107;
-  color: black;
+  background-color: #f7c327;
+  color: white;
 }
 
 /* Error */
 .snackbar-error {
-  background-color: #dc3545;
+  background-color: #f34f60;
   color: white;
 }
 
 /* Info */
 .snackbar-info {
-  background-color: #17a2b8;
+  background-color: #33cbe2;
   color: white;
 }
 
