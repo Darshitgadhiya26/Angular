@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { GoogleAuthProvider } from '@angular/fire/auth'
 import { ToastService } from './toast.service';
-import { ErrorEnum, ErrorMsg } from './common';
+import { ErrorEnum, ErrorMsg, ToastClass, ToastMsg } from './common';
 
 @Injectable({
   providedIn: 'root',
@@ -20,25 +20,24 @@ export class AuthService {
   login(email: any, password: any) {
     this.fireauth.signInWithEmailAndPassword(email, password).then(
       (res) => {
-        alert('LOGIN SUCCESFULLY');
+        // alert('LOGIN SUCCESFULLY');
         localStorage.setItem('token', 'true');
 
         if (res.user?.emailVerified == true) {
+          this.toast.openSnackBar(ToastMsg.loginSuccess, ToastClass.success, 3000);
           this.router.navigate(['dashboard']);
         }
         else {
+          this.toast.openSnackBar(ToastMsg.sendEmailVerification, ToastClass.info, 3000);
           this.router.navigate(['varifyEmail'])
         }
 
       },
       (err: any) => {
-        // alert(err.message);
-        // console.log("Error", this.replaceError(ErrorEnum.invalidCredential))
         if (err.message == this.replaceError(ErrorEnum.invalidCredential)) {
-          this.toast.openSnackBar(ErrorMsg.invalidCredential, 'snackbar-error', 100000)
+          this.toast.openSnackBar(ErrorMsg.invalidCredential, ToastClass.error, 3000)
         }
-
-        this.router.navigate(['/login']);
+        //this.router.navigate(['/login']);
       }
     );
   }
