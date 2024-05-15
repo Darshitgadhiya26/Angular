@@ -13,14 +13,15 @@ import { MatchDisplayComponent } from './match-display/match-display.component';
 import { PlayerSelectionComponent } from './player-selection/player-selection.component';
 import { ScoringComponent } from './scoring/scoring.component';
 import { WinnerDeclarationComponent } from './winner-declaration/winner-declaration.component';
+import { MatchCreateComponent } from './match-create/match-create.component';
 
 const routes: Routes = [
-  {path :'', redirectTo:'login', pathMatch:'full'},
-  {path :'login', component:LoginComponent},
-  {path :'register', component:RegisterComponent},
-  {path :'dashboard', component:DashboardComponent,canActivate: [AuthGuard]},
-  {path :'forgotPassword', component:ForgotPasswordComponent},
-  {path :'varifyEmail', component:VarifyEmailComponent, },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'forgotPassword', component: ForgotPasswordComponent },
+  { path: 'varifyEmail', component: VarifyEmailComponent, },
   { path: 'auth', redirectTo: '/authentication', pathMatch: 'full' },
   { path: 'authentication', component: AuthenticationComponent },
   { path: 'group-management', component: GroupManagementComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'scoring', component: ScoringComponent },
   { path: 'leaderboard', component: LeaderboardComponent },
   { path: 'winner-declaration', component: WinnerDeclarationComponent },
+  { path: 'match-create', component: MatchCreateComponent }
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ export class PlayerSelectionComponent implements OnInit {
 
   ngOnInit(): void {
     // Initialize or retrieve user's random number from Firebase
-    this.getUserRandomNumber();
+    // this.getUserRandomNumber();
   }
 
   generateRandomNumber(): void {

@@ -1,0 +1,19 @@
+/* match-form-dialog.component.css */
+/* :host {
+  display: block;
+  padding: 20px;
+} */
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Adjust spacing between form fields */
+}
+
+/* button {
+  margin-top: 20px; 
+} */
+
+.mat-select-panel {
+  width: 200px !important;
+  min-width: none;
+}
